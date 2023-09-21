@@ -1,0 +1,1619 @@
+[
+    {
+        "id": "3220091dc1c65c7e",
+        "type": "tab",
+        "label": "Wallbox with DomBusEVSE module",
+        "disabled": false,
+        "info": "Home made wallbox using the Creasol DomBusEVSE module\n[https://wwww.creasol.it/EVSE](https://wwww.creasol.it/EVSE)"
+    },
+    {
+        "id": "d42dcdacbf5bb3f0",
+        "type": "modbus-read",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMode read",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "3",
+        "quantity": "1",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "59a3d856125048ac",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 770,
+        "y": 140,
+        "wires": [
+            [
+                "fb9416a827e57ae8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2cb1fc3bc4d64e3f",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "944f25185e55edb0",
+        "type": "modbus-write",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMode write",
+        "showStatusActivities": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "3",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e925464625a47279",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Solar",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "08d290ec497f83d4",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Solar + 25%grid",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "fddcfd424a6f02d2",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Solar + 50%grid",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "444d778a74f3ea62",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Solar + 75%grid",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "c2712ddac954eb46",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Solar + 100%grid",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "cab9b8d36480dd9c",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "Managed",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "c264b84e71b0e3dc",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "Wallbox operating mode",
+        "info": "",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0b4e60df059462c7",
+        "type": "modbus-read",
+        "z": "3220091dc1c65c7e",
+        "name": "EVState read",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "59a3d856125048ac",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "79a6e66c280581b3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fb9416a827e57ae8",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMode name",
+        "func": "if (msg.payload==0) {\n    msg.payload=\"Off\";\n    status={fill:\"red\",shape:\"ring\",text:\"disconnected\"};\n} else if (msg.payload==1) {\n    msg.payload=\"Solar\";\n} else if (msg.payload==2) {\n    msg.payload=\"Solar+25% from Grid\";\n} else if (msg.payload==3) {\n    msg.payload=\"Solar+50% from Grid\";\n} else if (msg.payload==4) {\n    msg.payload=\"Solar+75% from Grid\";\n} else if (msg.payload==5) {\n    msg.payload=\"Solar+100% from Grid\";\n} else if (msg.payload==6) {\n    msg.payload=\"Managed\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 140,
+        "wires": [
+            [
+                "b2346d7ee5c44307",
+                "cb2e6c0daee3d24e"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "b2346d7ee5c44307",
+        "type": "display property",
+        "z": "3220091dc1c65c7e",
+        "name": "EVState",
+        "property": "msg.payload",
+        "showDate": 0,
+        "showTime": 0,
+        "x": 1100,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0901aad766d813c2",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "My home-made wallbox using DomBusEVSE module, in garage",
+        "info": "",
+        "x": 290,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "79a6e66c280581b3",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMode name",
+        "func": "if (msg.payload==1) {\n    msg.payload=\"Unplugged\";\n    status={fill:\"red\",shape:\"ring\",text:\"disconnected\"};\n} else if (msg.payload==2) {\n    msg.payload=\"Plugged\";\n} else if (msg.payload==3) {\n    msg.payload=\"Charging\";\n} else if (msg.payload==4) {\n    msg.payload=\"Charging+Ventilation req.\";\n} else if (msg.payload==5) {\n    msg.payload=\"Alarm from EV\";\n} else if (msg.payload==6) {\n    msg.payload=\"Alarm Power outage\";\n} else if (msg.payload==7) {\n    msg.payload=\"Alarm Contactor welded\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "5a55b90fd471b6d0",
+                "dbcc44985fec74a0"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "5a55b90fd471b6d0",
+        "type": "display property",
+        "z": "3220091dc1c65c7e",
+        "name": "EVState",
+        "property": "msg.payload",
+        "showDate": 0,
+        "showTime": 0,
+        "x": 1180,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c43846525d8915b",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "Wallbox status",
+        "info": "",
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "220b966234b6cf61",
+        "type": "modbus-read",
+        "z": "3220091dc1c65c7e",
+        "name": "EVCurrent read",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": false,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "5",
+        "quantity": "1",
+        "rate": "6",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "59a3d856125048ac",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 780,
+        "y": 600,
+        "wires": [
+            [
+                "baefd29635182a6f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9e6ecfb921fa3a89",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "Charging current (Ampere)",
+        "info": "",
+        "x": 790,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cb2e6c0daee3d24e",
+        "type": "show-value",
+        "z": "3220091dc1c65c7e",
+        "name": "",
+        "path": "",
+        "x": 1110,
+        "y": 200,
+        "wires": [
+            [
+                "8b50b9e635a227c3"
+            ]
+        ]
+    },
+    {
+        "id": "ddb671377824c324",
+        "type": "ui_dropdown",
+        "z": "3220091dc1c65c7e",
+        "name": "",
+        "label": "EVMode select",
+        "tooltip": "Charging station for electric car",
+        "place": "Select option",
+        "group": "f35fbc9a8a87ee5f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Off",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "Solar",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Solar + 25% from grid",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Solar + 50% from grid",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "Solar + 75% from grid",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Solar + 100% from grid",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Managed",
+                "value": "6",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload",
+        "topicType": "msg",
+        "className": "",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "944f25185e55edb0"
+            ]
+        ]
+    },
+    {
+        "id": "a7ec79fc606ae21c",
+        "type": "modbus-read",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": false,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "6",
+        "quantity": "6",
+        "rate": "3",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "59a3d856125048ac",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "4b88ee5f7e092862",
+                "28a324c59c99ddeb",
+                "ae66bfe51812d66f",
+                "f993da58c3699a15",
+                "212f9f58496ba89d",
+                "ffd608d66eab7038"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4c8ec4dc2a7ef8c0",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower Total G",
+        "group": "6c2ca5d3c51b330b",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Charging Power [W]: Total",
+        "label": "W",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "8000",
+        "colors": [
+            "#33d17a",
+            "#e6e600",
+            "#ff0000"
+        ],
+        "seg1": "2500",
+        "seg2": "7320",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b1bceaa2e7ab1c26",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower Solar G",
+        "group": "6c2ca5d3c51b330b",
+        "order": 5,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Charging Power [W]: Solar",
+        "label": "W",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "8000",
+        "colors": [
+            "#4b9560",
+            "#e6e600",
+            "#ff0000"
+        ],
+        "seg1": "2500",
+        "seg2": "7320",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "158084c72c7a9e98",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower Grid G",
+        "group": "6c2ca5d3c51b330b",
+        "order": 7,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Charging Power [W]: from Grid",
+        "label": "W",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "8000",
+        "colors": [
+            "#4b9560",
+            "#e6e600",
+            "#ff0000"
+        ],
+        "seg1": "2500",
+        "seg2": "7320",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "634c840c9a776c9d",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower Total C",
+        "group": "6c2ca5d3c51b330b",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "Charging power [W]: total",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "inputLabels": [
+            "Total"
+        ]
+    },
+    {
+        "id": "f1a336fe0b0d8974",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "EVCurrent C",
+        "group": "ead6cb9797861e1e",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "EV Current [A]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "36",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "ampere",
+        "x": 1190,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b88ee5f7e092862",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower value",
+        "func": "msg.payload=msg.payload[0]\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "634c840c9a776c9d",
+                "4c8ec4dc2a7ef8c0"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "baefd29635182a6f",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVCurrent value",
+        "func": "msg.payload=msg.payload[0]\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 600,
+        "wires": [
+            [
+                "f1a336fe0b0d8974",
+                "c2019bc95d2e0766"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "a5441097de3f10e8",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "EVVoltage C",
+        "group": "ead6cb9797861e1e",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "label": "EV Voltage [V]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No data",
+        "dot": false,
+        "ymin": "200",
+        "ymax": "260",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f993da58c3699a15",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVVoltage value",
+        "func": "msg.payload=msg.payload[3]\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "a5441097de3f10e8",
+                "13ff8d4cae4e7e49"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "6354b32e48924d92",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPF C",
+        "group": "ead6cb9797861e1e",
+        "order": 6,
+        "width": "6",
+        "height": "4",
+        "label": "EV Power Factor [%]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 540,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ffd608d66eab7038",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPF value",
+        "func": "msg.payload=msg.payload[4]/10\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "6354b32e48924d92",
+                "b4faa33a180fb009"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "dbcc44985fec74a0",
+        "type": "ui_text",
+        "z": "3220091dc1c65c7e",
+        "group": "f35fbc9a8a87ee5f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "EVState: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#3366ff",
+        "x": 1190,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8b50b9e635a227c3",
+        "type": "ui_text",
+        "z": "3220091dc1c65c7e",
+        "group": "f35fbc9a8a87ee5f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "EV Mode (read)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1310,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ddc28aa0cdbc7b59",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower Solar C",
+        "group": "6c2ca5d3c51b330b",
+        "order": 6,
+        "width": "6",
+        "height": "4",
+        "label": "Charging Power [W]: Solar",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28a324c59c99ddeb",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower value",
+        "func": "msg.payload=msg.payload[1]\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "ddc28aa0cdbc7b59",
+                "b1bceaa2e7ab1c26"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "b370124746a99230",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower Grid C",
+        "group": "6c2ca5d3c51b330b",
+        "order": 8,
+        "width": "6",
+        "height": "4",
+        "label": "Charging Power [W]: from Grid",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 540,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae66bfe51812d66f",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPower value",
+        "func": "msg.payload=msg.payload[2]\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 620,
+        "wires": [
+            [
+                "b370124746a99230",
+                "158084c72c7a9e98"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "9f58c07018c72b3e",
+        "type": "modbus-write",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMAXCURRENT",
+        "showStatusActivities": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "9001",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1370,
+        "y": 760,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7e9e20c5e7333993",
+        "type": "ui_numeric",
+        "z": "3220091dc1c65c7e",
+        "name": "",
+        "label": "EVMaxCurrent",
+        "tooltip": "Specify the max current supported by the EV cable (normally 16 or 32)",
+        "group": "f35fbc9a8a87ee5f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "6",
+        "max": "36",
+        "step": "2",
+        "className": "",
+        "x": 1170,
+        "y": 760,
+        "wires": [
+            [
+                "9f58c07018c72b3e"
+            ]
+        ]
+    },
+    {
+        "id": "8b0c77d29b54d34f",
+        "type": "modbus-write",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMAXPOWER",
+        "showStatusActivities": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "9002",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1380,
+        "y": 820,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "28b7c58a81d3bdc4",
+        "type": "ui_numeric",
+        "z": "3220091dc1c65c7e",
+        "name": "",
+        "label": "EVMaxPower",
+        "tooltip": "Specify the max current supported by the EV cable (normally 16 or 32)",
+        "group": "f35fbc9a8a87ee5f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "1500",
+        "max": "22000",
+        "step": "100",
+        "className": "",
+        "x": 1180,
+        "y": 820,
+        "wires": [
+            [
+                "8b0c77d29b54d34f"
+            ]
+        ]
+    },
+    {
+        "id": "c2019bc95d2e0766",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "EVCurrent G",
+        "group": "ead6cb9797861e1e",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Current [A]",
+        "label": "A",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "36",
+        "colors": [
+            "#33d17a",
+            "#e6e600",
+            "#ff0000"
+        ],
+        "seg1": "28",
+        "seg2": "32",
+        "diff": false,
+        "className": "",
+        "x": 1190,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b4faa33a180fb009",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "EVPF G",
+        "group": "ead6cb9797861e1e",
+        "order": 5,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Power Factor [%]",
+        "label": "%",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "95",
+        "seg2": "98",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "13ff8d4cae4e7e49",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "EVVoltage G",
+        "group": "ead6cb9797861e1e",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Voltage [V]",
+        "label": "V",
+        "format": "{{msg.payload}}",
+        "min": "200",
+        "max": "260",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "215",
+        "seg2": "230",
+        "diff": true,
+        "className": "",
+        "x": 550,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "bdd65f3bff88c060",
+        "type": "ui_chart",
+        "z": "3220091dc1c65c7e",
+        "name": "Grid Power C",
+        "group": "6c2ca5d3c51b330b",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "label": "Grid Power",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "8000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 560,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "212f9f58496ba89d",
+        "type": "function",
+        "z": "3220091dc1c65c7e",
+        "name": "EVGrid value",
+        "func": "msg.payload=msg.payload[5]\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "bdd65f3bff88c060",
+                "c45f426649b96305"
+            ]
+        ],
+        "outputLabels": [
+            "msg.payload"
+        ]
+    },
+    {
+        "id": "c45f426649b96305",
+        "type": "ui_gauge",
+        "z": "3220091dc1c65c7e",
+        "name": "Grid Power G",
+        "group": "6c2ca5d3c51b330b",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Grid power [W]",
+        "label": "W",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "8000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ff0000"
+        ],
+        "seg1": "5500",
+        "seg2": "6350",
+        "diff": false,
+        "className": "",
+        "x": 560,
+        "y": 340,
+        "wires": [],
+        "inputLabels": [
+            "WWWWW"
+        ]
+    },
+    {
+        "id": "8a1c114cfcfcd991",
+        "type": "modbus-write",
+        "z": "3220091dc1c65c7e",
+        "name": "Grid power feed (test)",
+        "showStatusActivities": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "11",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0ab67463119ec507",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10+80*$random()\t",
+        "payloadType": "jsonata",
+        "x": 750,
+        "y": 480,
+        "wires": [
+            [
+                "8a1c114cfcfcd991"
+            ]
+        ]
+    },
+    {
+        "id": "9797f88c9ccbcfe4",
+        "type": "modbus-getter",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMaxCurrentRead",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "",
+        "dataType": "InputRegister",
+        "adr": "9001",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 970,
+        "y": 760,
+        "wires": [
+            [
+                "7e9e20c5e7333993"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ecbec3fa24318b73",
+        "type": "inject",
+        "z": "3220091dc1c65c7e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "8",
+        "topic": "",
+        "payloadType": "date",
+        "x": 770,
+        "y": 760,
+        "wires": [
+            [
+                "9797f88c9ccbcfe4",
+                "0a20b821caf0c60c"
+            ]
+        ]
+    },
+    {
+        "id": "0a20b821caf0c60c",
+        "type": "modbus-getter",
+        "z": "3220091dc1c65c7e",
+        "name": "EVMaxPowerRead",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "",
+        "dataType": "InputRegister",
+        "adr": "9002",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 970,
+        "y": 820,
+        "wires": [
+            [
+                "28b7c58a81d3bdc4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "de39c9d4a4d1db26",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "Send current grid power (in Watt) to DomBusEVSE",
+        "info": "In case that you already have an energy meter measuring the grid power (in watt, negative is power is sourced to the grid), configure the flow to send the current grid power to the DomBusEVSE Grid Power register.\n",
+        "x": 870,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7660c12a8d4f4e3e",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "Read wallbox status",
+        "info": "",
+        "x": 771.88330078125,
+        "y": 85.88333129882812,
+        "wires": []
+    },
+    {
+        "id": "df72906ddeee2aac",
+        "type": "comment",
+        "z": "3220091dc1c65c7e",
+        "name": "Set some configuration registers",
+        "info": "",
+        "x": 813.88330078125,
+        "y": 705.38330078125,
+        "wires": []
+    },
+    {
+        "id": "59a3d856125048ac",
+        "type": "modbus-client",
+        "name": "DomBusEVSE",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB0",
+        "serialType": "RTU",
+        "serialBaudrate": "115200",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "227",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "f35fbc9a8a87ee5f",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "f1c5618bc6271469",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "6c2ca5d3c51b330b",
+        "type": "ui_group",
+        "name": "Gauges",
+        "tab": "f1c5618bc6271469",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "ead6cb9797861e1e",
+        "type": "ui_group",
+        "name": "Gauges2",
+        "tab": "f1c5618bc6271469",
+        "order": 3,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f1c5618bc6271469",
+        "type": "ui_tab",
+        "name": "DomBusEVSE wallbox",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
