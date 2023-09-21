@@ -1,5 +1,5 @@
 # Using Creasol DomBus modules with Node-RED
-DomBus modules can be supplied with two firmware: please choose *Modbus firmware* if you intend to use it with Node-RED.
+DomBus modules can be supplied with two types of firmware: please choose *Modbus firmware* if you intend to use it with Node-RED.
 
 In this repository, for each module a directory is created within the configuration files to get a flow and UI to manage it.
 
