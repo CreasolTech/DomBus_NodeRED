@@ -1,0 +1,673 @@
+[
+    {
+        "id": "091811620e763cb5",
+        "type": "tab",
+        "label": "DomBus31 - 8 relays",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "164654ca0c04f739",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay1",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "42f7e6d1983408cc"
+            ]
+        ]
+    },
+    {
+        "id": "73055e4594bbd6b2",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL1",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 410,
+        "y": 40,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f151fcfb023ef999",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay2",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "0cac09a24204adb3"
+            ]
+        ]
+    },
+    {
+        "id": "825bb08ceaa73d86",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL2",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": true,
+        "startDelayTime": "1",
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "441f11c4cbac4447",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay3",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "b08c65718d42f139"
+            ]
+        ]
+    },
+    {
+        "id": "e6c8559f0f9106bd",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL3",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "2",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "2",
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8507fce31115525a",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay4",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "83c5ea6c3eca6acf"
+            ]
+        ]
+    },
+    {
+        "id": "9c0b56b6bde82111",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL4",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "3",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3378f1d6c20a62cf",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay5",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "fc2cfee4dd8b906f"
+            ]
+        ]
+    },
+    {
+        "id": "71447e93d2b98492",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL5",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "42f7e6d1983408cc",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "On => 1",
+        "func": "if (msg.payload == true)\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 40,
+        "wires": [
+            [
+                "73055e4594bbd6b2"
+            ]
+        ]
+    },
+    {
+        "id": "0cac09a24204adb3",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "Activate relay for half second",
+        "func": "if (msg.payload == true)\n    msg.payload=16;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "825bb08ceaa73d86"
+            ]
+        ]
+    },
+    {
+        "id": "b08c65718d42f139",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "Activate relay for 1 second",
+        "func": "if (msg.payload == true)\n    msg.payload=32;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "e6c8559f0f9106bd"
+            ]
+        ]
+    },
+    {
+        "id": "83c5ea6c3eca6acf",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "On => 1",
+        "func": "if (msg.payload == true)\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "9c0b56b6bde82111"
+            ]
+        ]
+    },
+    {
+        "id": "fc2cfee4dd8b906f",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "On => 1",
+        "func": "if (msg.payload == true)\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "71447e93d2b98492"
+            ]
+        ]
+    },
+    {
+        "id": "5b330a2c60df1438",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay6",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "8e32314b001b3f76"
+            ]
+        ]
+    },
+    {
+        "id": "a972ca3f122ffbb6",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL6",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "5",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8e32314b001b3f76",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "On => 1",
+        "func": "if (msg.payload == true)\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "a972ca3f122ffbb6"
+            ]
+        ]
+    },
+    {
+        "id": "fe73c24662032d2d",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay7",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "df429542cb3ea7b8"
+            ]
+        ]
+    },
+    {
+        "id": "2ec1fe4aaef40dcd",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL7",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "6",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "df429542cb3ea7b8",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "On => 1",
+        "func": "if (msg.payload == true)\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "2ec1fe4aaef40dcd"
+            ]
+        ]
+    },
+    {
+        "id": "5fd1c979fe484bca",
+        "type": "ui_switch",
+        "z": "091811620e763cb5",
+        "name": "",
+        "label": "Relay8",
+        "tooltip": "",
+        "group": "52e37471eec70a83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "8b9717e02828816f"
+            ]
+        ]
+    },
+    {
+        "id": "b2157c9723f7cf59",
+        "type": "modbus-write",
+        "z": "091811620e763cb5",
+        "name": "RL8",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "49",
+        "dataType": "HoldingRegister",
+        "adr": "7",
+        "quantity": "1",
+        "server": "59a3d856125048ac",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8b9717e02828816f",
+        "type": "function",
+        "z": "091811620e763cb5",
+        "name": "On => 1",
+        "func": "if (msg.payload == true)\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 460,
+        "wires": [
+            [
+                "b2157c9723f7cf59"
+            ]
+        ]
+    },
+    {
+        "id": "52e37471eec70a83",
+        "type": "ui_group",
+        "name": "DomBus36",
+        "tab": "bb450de4d065f7b4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "59a3d856125048ac",
+        "type": "modbus-client",
+        "name": "DomBus1",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB0",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "115200",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "227",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "10000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "bb450de4d065f7b4",
+        "type": "ui_tab",
+        "name": "DomBus36",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
