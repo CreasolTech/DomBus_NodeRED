@@ -18,6 +18,28 @@ Modules are available in two version:
 
 [Store website](https://store.creasol.it/domotics) - [Information website](https://www.creasol.it/domotics)
 
+## Making a home-made smart wallbox, controlled by Node-RED, to charge the electric car
+<a href="https://www.creasol.it/DomBusEVSE"><img src="https://images.creasol.it/DomBusEVSE_wallbox_nodered_ui.webp" alt="DomBusEVSE EVSE module DIY wallbox with NodeRED" style="float: left; margin-right: 2em; vertical-align: middle;" align="left" /></a>
+EV charging can be enabled in the following modes:
+* **Solar**, using only energy from photovoltaic/wind/battery system
+* **25%, 50%, 75%, 100%** , using power from solar (if available) plus 25%/50%/75%/100% of contractual power from the electricity grid
+* **Managed**: in this case the EVSE module works in "stupid" mode, charging the vehicle using the current (Ampere) set by the user through an automation. In this way it's possible to add more and more features, **improving load balancing to charge more vehicles simultaneously or use energy from the house storage, managing the charging with the priority and power decided by the automation**.
+
+
+<a href="https://www.creasol.it/NodeRED"><img src="https://images.creasol.it/DomBusEVSE_wallbox_nodered_flow.webp" alt="Flow to use the DomBusEVSE EVSE module homemade wallbox with NodeRED" style="float: left; margin-right: 2em; vertical-align: middle;" align="left" /></a>
+
+## Creasol DomBus36 12 relay module
+This is a very low power module consuming **only 12mW in stand-by (all relays OFF) and only 750mW with all 12 relays ON**.
+
+Each relay can be toggled ON/OFF or switch ON for a determined amount of time (from 64ms to hours or days) in a monostable way. After that time, the relay is switched OFF automatically by the module. 
+
+Relay contacts are protected by overvoltage and overcurrent.
+
+<a href="https://www.creasol.it/DomBus36"><img src="https://images.creasol.it/DomBus36_relay_module_nodered.webp" alt="DomBus36 12 relays module, Modbus protocol, working with NodeRED" style="float: left; margin-right: 2em; vertical-align: middle;" align="left" /></a>
+
+
+## DomBus modules
+
 ### DomBusEVSE - EVSE module to build a Smart Wallbox / EV charging station
 <a href="https://store.creasol.it/DomBusEVSE"><img src="https://images.creasol.it/creDomBusEVSE_200.png" alt="DomBusEVSE smart EVSE module to make a Smart Wallbox EV Charging station" style="float: left; margin-right: 2em;" align="left" /></a>
 Complete solution to make a Smart EVSE, **charging the electric vehicle using only energy from renewable source (photovoltaic, wind, ...), or adding 25-50-75-100% of available power from the grid**.
